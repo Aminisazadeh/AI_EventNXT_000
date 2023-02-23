@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.1.2"
 
 gem "rails", "~> 7.0.0"
-gem "pg", "~> 1.4.3"
+#gem "pg", "~> 1.4.3"
 gem "mustache", "~> 1.1"
 gem "tzinfo-data"
 gem "sprockets-rails"
@@ -23,6 +23,11 @@ gem "devise", "~> 4.8.0"
 gem "doorkeeper", "~> 5.5.0"
 gem "rack-cors"
 
+gem "web-console"
+gem "spring"
+
+gem "jquery-rails"
+
 group :development, :test do
   gem "rspec-rails", "~> 5.0.0"
   gem "cucumber-rails", require: false
@@ -33,9 +38,10 @@ group :development, :test do
   gem "database_cleaner", "~> 2.0.0"
   gem "faker", "~> 2.20.0"
   gem "factory_bot_rails", "~> 6.2.0"
+
+  gem 'sqlite3', '~> 1.6'
 end
 
-gem "web-console"
-gem "spring"
-
-gem "jquery-rails"
+group :production do
+  gem 'pg' # for Heroku deployment
+end
