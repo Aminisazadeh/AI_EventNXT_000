@@ -28,6 +28,8 @@ gem "spring"
 
 gem "jquery-rails"
 
+gem 'puma', '~>5.2'
+
 group :development, :test do
   gem "rspec-rails", "~> 5.0.0"
   gem "cucumber-rails", require: false
